@@ -1,0 +1,64 @@
+<html>
+  <head>
+  </head>
+
+  <body bgcolor='#545454'>
+
+    <div>
+	<a href="javascript: history.back()">
+		<img align="left" width="40px" height="40px"
+			border="none" src="etoys-related/close.png"/></a>
+    </div>
+
+    <script type="text/javascript">
+
+if(opener)
+   {
+      if(!opener.squeakWindows)
+         {
+            opener.squeakWindows = Array(self);
+            writeSqueakEmbed();
+         }
+      else
+         {
+            for(i = 0; i<opener.squeakWindows.length;i++)
+               {
+                  if(!(opener.squeakWindows[i] == self))
+                     opener.squeakWindows[i].close();
+               }            
+            opener.squeakWindows = Array(self);
+            writeSqueakEmbed();
+         }
+   }
+else
+   writeSqueakEmbed();
+
+
+    function writeSqueakEmbed()
+      {
+      var activityPath = 'SqueakActivities/'
+      var projectPath = window.location.hash.substr(1);
+      var href = window.location.pathname;
+      var folderSplit = href.split('/');
+      var folderIndex = href.lastIndexOf(folderSplit[folderSplit.length - 1]);
+      var folderPath = href.substring(0, folderIndex) + activityPath;
+
+      var embedString = '<embed\n' +
+       'id="project"\n' +
+       'type="application/x-Squeak-Source"\n' +
+       'ALIGN="CENTER"\n' +
+       'src="file://' + folderPath + projectPath + '"\n' +
+       'showSplash="false"\n' +
+       'flaps="none"\n' +
+       'base=""\n' +
+       'pluginspage="http://www.squeakland.org/plugin/detect/detectinstaller.html"\n'
++
+       'width="100%"\n' +
+       'height="94%">\n' +
+       '</embed>';
+      document.write(embedString);
+      }
+
+    </script>
+  </body>
+</html>

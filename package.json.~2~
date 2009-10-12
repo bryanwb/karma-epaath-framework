@@ -1,0 +1,19 @@
+{
+    "dependencies": [],
+    "name": "karma-epaath-framework",
+    "description": "framework for displaying Flash-based lessons",
+    "author": "Trinarayan Maharjan",
+    "contributors": [],
+    "keywords": ["E-Paath", "Framework"],
+    "license":"MIT",
+    "version": "1",
+    "karma": {
+	     "locale": "ne_np",	
+    },   
+    "main": "",
+    "type": "zip",
+    "githubName": "karma-epaath-framework",
+    "location": ""http://github.com/bryanwb/karma-epaath-framework/zipball/master",
+
+
+}

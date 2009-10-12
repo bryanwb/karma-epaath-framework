@@ -1,0 +1,8 @@
+﻿<flash_project name="MenuScreen" version="1">
+    <project_file path="./MenuStage.fla" filetype="fla" profile="" />
+    <project_file path="./Main.as" filetype="as" />
+    <project_file path="./WeekFlap.as" filetype="as" />
+    <project_file path="./ClassButton.as" filetype="as" />
+    <project_file path="./XMLReader.as" filetype="as" />
+    <project_file path="./ErrorBoxHandler.as" filetype="as" />
+</flash_project>
